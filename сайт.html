@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DRUGIE TANCY — студия современного танца в Макеевке и Нижней Крынке. Hip-hop, contemporary и акробатика. Пробное занятие — 300 ₽.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="DRUGIE TANCY — студия танцев">
+<meta property="og:description" content="Современная хореография, акробатика и победы. Пробное занятие — 300 ₽.">
+<meta property="og:type" content="website">
+<title>DRUGIE TANCY — студия танцев</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SportsActivityLocation",
+  "name":"DRUGIE TANCY",
+  "description":"Студия современного танца: hip-hop, contemporary, акробатика. Группы для детей и взрослых.",
+  "telephone":"+7-949-123-45-67",
+  "email":"drugie.tancy@mail.ru",
+  "priceRange":"300₽–4500₽",
+  "currenciesAccepted":"RUB",
+  "address":[
+    {"@type":"PostalAddress","streetAddress":"Дом культуры","addressLocality":"Нижняя Крынка","addressCountry":"RU"},
+    {"@type":"PostalAddress","streetAddress":"Спортивный клуб «Физра»","addressLocality":"Макеевка","addressCountry":"RU"}
+  ],
+  "sameAs":["https://www.instagram.com/drugie_tancy_","https://www.youtube.com/@drugie_tancy","https://t.me/drugie_tancy","https://www.tiktok.com/@drugie_tancy","https://vk.ru/drugietancy"]
+}
+</script>
+<style>
+  :root{
+    --lime:#a3ff12;--orange:#ff8a30;--bg:#0a0a0a;--panel:#121212;--line:#292929;
+    --muted:#b0b0b0;--heading:'Unbounded',system-ui,sans-serif;--body:'Manrope',system-ui,sans-serif;--nav:74px
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + 16px)}
+  body{margin:0;background:var(--bg);color:#fff;font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  button,input,select,textarea{font:inherit}
+  .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+  h1,h2,h3,h4{font-family:var(--heading);line-height:1.15;letter-spacing:-.03em}
+  h2{font-size:clamp(1.7rem,4vw,2.5rem);text-transform:uppercase;margin:0 0 2rem}
+  h2:after{content:"";display:block;width:58px;height:4px;margin-top:12px;background:var(--lime);box-shadow:0 0 18px #a3ff1280;border-radius:4px}
+  .muted{color:var(--muted)}
+
+  .header{position:sticky;top:0;z-index:10;background:#0a0a0af2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+  .navbar{width:min(1240px,calc(100% - 40px));min-height:var(--nav);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo{font:900 clamp(1.1rem,2vw,1.55rem) var(--heading);text-decoration:none;white-space:nowrap}
+  .logo span{color:var(--lime)}
+  .nav-links{display:flex;gap:clamp(8px,1vw,14px);flex-wrap:nowrap;align-items:center;list-style:none;margin:0;padding:0}
+  .nav-links a{text-decoration:none;font-size:.82rem;font-weight:700;text-transform:uppercase;white-space:nowrap}
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--lime)}
+  .burger{display:none;background:#111;border:1px solid var(--line);border-radius:12px;width:46px;height:46px;color:white;font-size:1.5rem;cursor:pointer}
+  .nav-tools{display:flex;align-items:center;gap:10px}
+  .language-switch{display:flex;padding:3px;border:1px solid var(--line);border-radius:99px;background:#fff;flex-shrink:0}
+  .language-switch button{min-width:37px;padding:6px 9px;border:0;border-radius:99px;background:transparent;color:#66584f;font-size:.72rem;font-weight:800;cursor:pointer}
+  .language-switch button[aria-pressed="true"]{background:var(--lime);color:#fff}
+  .theme-toggle{width:38px;height:38px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;background:var(--panel);color:inherit;font-size:1.05rem;cursor:pointer}
+  .theme-toggle:hover,.theme-toggle:focus-visible{border-color:var(--lime);box-shadow:0 0 14px #ec741d33}
+
+  .hero{min-height:min(760px,calc(100svh - var(--nav)));display:grid;place-items:center;text-align:center;padding:90px 20px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#a3ff1221,transparent 48%),linear-gradient(#a3ff1209 1px,transparent 1px),linear-gradient(90deg,#a3ff1209 1px,transparent 1px);background-size:auto,56px 56px,56px 56px}
+  .hero:before{content:"";position:absolute;width:50vw;height:50vw;min-width:300px;min-height:300px;border-radius:50%;background:#a3ff1212;filter:blur(70px);pointer-events:none;animation:glow-drift 9s ease-in-out infinite alternate}
+  .hero-inner{max-width:900px;position:relative;animation:hero-enter .9s cubic-bezier(.2,.7,.3,1) both}
+  .eyebrow{color:var(--lime);font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.5rem,9vw,6.2rem);margin:14px 0}
+  .hero h1 span{display:block;color:var(--lime);font-size:clamp(2.3rem,8.5vw,5.8rem);text-shadow:0 0 34px #a3ff1266;animation:neon-breathe 4s ease-in-out infinite}
+  .hero p{max-width:620px;color:#c4c4c4;margin:24px auto 32px}
+
+  .btn{display:inline-flex;justify-content:center;align-items:center;min-height:50px;padding:12px 25px;border:1px solid var(--lime);border-radius:99px;background:var(--lime);color:#0a0a0a;text-decoration:none;text-transform:uppercase;font-size:.83rem;font-weight:800;letter-spacing:.06em;cursor:pointer;transition:.2s}
+  .btn:hover,.btn:focus-visible{background:transparent;color:var(--lime);box-shadow:0 0 24px #a3ff125c;transform:translateY(-2px)}
+  .btn.outline{background:transparent;color:var(--lime)}
+  .btn.outline:hover{background:var(--lime);color:#0a0a0a}
+
+  section.content{padding:clamp(56px,8vw,92px) 0;border-bottom:1px solid var(--line)}
+  section.alt{background:#0e0e0e}
+  .copy{max-width:790px}
+  .copy p{margin:0 0 15px}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px;transition:.25s}
+  .card:hover{border-color:var(--lime);transform:translateY(-4px)}
+  .card h3{font-size:1.05rem;margin:0 0 10px}
+  .card p{color:var(--muted);margin:0}
+  .tag{font-size:.78rem;color:var(--lime);font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  .tag.warm,.warm{color:var(--orange)}
+  .list{padding:0;margin:0;list-style:none}
+  .list li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+  .list li:before{content:"›";color:var(--lime);font-size:1.2em;margin-right:10px}
+
+  .price{font:800 1.8rem var(--heading);color:var(--lime);margin:12px 0}
+  .price-card{text-align:center;display:flex;flex-direction:column;align-items:center}
+  .price-card ul{list-style:none;padding:0;color:var(--muted);margin:8px 0 22px;flex:1}
+  .price-card li{padding:4px}
+  .featured{border-color:var(--lime);box-shadow:0 0 24px #a3ff1218}
+
+  .ages{display:flex;flex-wrap:wrap;gap:10px}
+  .age{border:1px solid #353535;border-radius:50px;padding:10px 17px;background:#151515}
+  .age strong{color:var(--lime)}
+
+  .contact h3{color:var(--lime)}
+  .contact a{color:var(--muted);text-decoration:none}
+  .contact a:hover{color:var(--lime)}
+  .info-note{border-left:3px solid var(--orange);padding:12px 16px;background:#ff8a3010;color:#d4c4b8;border-radius:0 10px 10px 0}
+  .hour{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:10px 0;color:var(--muted)}
+  .hour strong{color:#fff;text-align:right}
+  .quick-links,.social-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+  .quick-links .btn,.social-links .btn{width:auto}
+  .social-links .vk,.quick-links .vk{border-color:var(--orange);background:transparent;color:var(--orange)}
+  .social-links .vk:hover,.quick-links .vk:hover{background:var(--orange);color:#111}
+
+  .quote-empty{min-height:160px;display:grid;place-items:center;text-align:center;border:1px dashed #555;border-radius:16px;padding:24px;color:var(--muted)}
+  .quote-empty strong{display:block;color:var(--orange);font-family:var(--heading);font-size:1rem;margin-bottom:8px}
+  .reviews-note{max-width:780px;margin:-18px 0 24px;padding:12px 16px;border-left:3px solid var(--orange);background:#ff8a3010;color:var(--muted);border-radius:0 10px 10px 0;font-size:.9rem}
+
+  .form-wrap{max-width:700px}
+  .form-intro{color:var(--muted);margin:-12px 0 24px}
+  .form{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,36px);display:grid;gap:15px}
+  .field{display:grid;gap:6px}
+  .field label{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800;color:#c5c5c5}
+  .field input,.field select,.field textarea{width:100%;border:1px solid #343434;border-radius:11px;background:#0d0d0d;color:white;padding:13px 14px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #a3ff1280;border-color:var(--lime)}
+  .field textarea{resize:vertical;min-height:96px}
+  .consent{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.9rem}
+  .consent input{accent-color:var(--lime);margin-top:5px}
+  .error{min-height:1.1em;color:#ff6666;font-size:.8rem}
+  .status{color:var(--lime);min-height:1.4em;text-align:center}
+  .form-note{font-size:.82rem;color:#898989;margin:0;text-align:center}
+  .booking-arrival{animation:booking-arrival 1.2s ease-out both}
+
+  .profile-card{align-self:start}
+  .profile-card [hidden]{display:none!important}
+  .profile-note{border-left:3px solid var(--orange);padding:12px 14px;margin-top:20px;background:#ff8a3010;color:var(--muted);font-size:.88rem}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  .cta{text-align:center;padding:70px 20px;background:radial-gradient(ellipse at center,#a3ff121a,transparent 65%)}
+  .cta h2:after{margin-left:auto;margin-right:auto}
+  .cta p{color:var(--muted);max-width:560px;margin:0 auto 25px}
+  .footer{text-align:center;padding:28px 16px;color:#777;font-size:.85rem}
+  .footer span{color:var(--lime)}
+  :focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+
+  /* Чат */
+  .chat-widget{position:fixed;right:20px;bottom:20px;z-index:1200}
+  .chat-launch{display:flex;align-items:center;gap:9px;min-height:52px;padding:0 20px;border:0;border-radius:99px;background:var(--lime);color:#111;font-weight:800;box-shadow:0 8px 30px #0003;cursor:pointer}
+  .chat-launch span:first-child{font-size:1.3rem}
+  .chat-panel{position:absolute;right:0;bottom:64px;width:min(370px,calc(100vw - 32px));height:min(540px,calc(100svh - 105px));display:flex;flex-direction:column;overflow:hidden;background:var(--panel);color:inherit;border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 55px #0004}
+  .chat-panel[hidden]{display:none}
+  .chat-head{display:flex;justify-content:space-between;align-items:center;padding:15px 17px;background:var(--lime);color:#111}
+  .chat-head strong,.chat-head small{display:block}
+  .chat-head small{opacity:.76}
+  .chat-head button{width:34px;height:34px;border:0;border-radius:50%;background:#0001;color:inherit;font-size:1.4rem;cursor:pointer}
+  .chat-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+  .chat-message{max-width:91%;padding:10px 13px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-size:.91rem;line-height:1.45;white-space:pre-wrap}
+  .chat-message.user{align-self:flex-end;background:var(--lime);color:#111;border-color:var(--lime)}
+  .chat-message.bot{align-self:flex-start}
+  .chat-suggestions{display:flex;gap:7px;padding:0 12px 10px;overflow:auto}
+  .chat-suggestions button{white-space:nowrap;padding:7px 10px;border:1px solid var(--line);border-radius:99px;background:transparent;color:inherit;font-size:.76rem;cursor:pointer}
+  .chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+  .chat-form input{min-width:0;flex:1;border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:var(--bg);color:inherit}
+  .chat-form button{width:42px;border:0;border-radius:11px;background:var(--lime);color:#111;font-size:1.1rem;cursor:pointer}
+
+  /* Анимации появления */
+  .motion-enabled .reveal-item{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+  .motion-enabled .reveal-item.visible{opacity:1;transform:translateY(0)}
+  .motion-enabled .grid .reveal-item:nth-child(2){transition-delay:.1s}
+  .motion-enabled .grid .reveal-item:nth-child(3){transition-delay:.2s}
+
+  @keyframes hero-enter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes neon-breathe{0%,100%{text-shadow:0 0 24px #a3ff1255}50%{text-shadow:0 0 42px #a3ff12a8}}
+  @keyframes glow-drift{from{transform:translate(-12%,-8%) scale(.9);opacity:.6}to{transform:translate(12%,8%) scale(1.15);opacity:1}}
+  @keyframes booking-arrival{0%,100%{box-shadow:0 0 0 0 transparent;border-color:var(--line)}35%{box-shadow:0 0 0 5px #a3ff1247,0 0 42px #a3ff1252;border-color:var(--lime)}}
+
+  /* Светлая тема */
+  .light-theme{--lime:#ec741d;--orange:#bd5412;--bg:#fffaf6;--panel:#fff;--line:#ead9cc;--muted:#70635b;background:var(--bg);color:#251a14}
+  .light-theme .header{background:rgba(255,250,246,.94);border-color:var(--line)}
+  .light-theme .logo,.light-theme .nav-links{color:#251a14}
+  .light-theme .nav-links a:hover,.light-theme .nav-links a:focus-visible{color:var(--orange)}
+  .light-theme .burger{background:#fff;border-color:var(--line);color:#251a14}
+  .light-theme .theme-toggle{background:#fff;color:#251a14}
+  .light-theme .hero{background:radial-gradient(ellipse at 50% 45%,#ec741d22,transparent 48%),linear-gradient(#ec741d0c 1px,transparent 1px),linear-gradient(90deg,#ec741d0c 1px,transparent 1px);background-size:auto,56px 56px,56px 56px}
+  .light-theme .hero:before{background:#ec741d17}
+  .light-theme .hero h1 span{text-shadow:0 0 30px #ec741d45}
+  .light-theme .hero p{color:#6b5d54}
+  .light-theme section.alt{background:#fff1e7}
+  .light-theme .field label{color:#514138}
+  .light-theme .field input,.light-theme .field select,.light-theme .field textarea{background:#fff;color:#251a14;border-color:#d8c6b7}
+  .light-theme .field input::placeholder,.light-theme .field textarea::placeholder{color:#958579}
+  .light-theme .age{background:#fff;border-color:#ead9cc;color:#33251c}
+  .light-theme .hour strong{color:#251a14}
+  .light-theme .footer{color:#76685e}
+
+  @media(max-width:1180px){
+    .burger{display:block}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#0b0b0b;border-bottom:1px solid var(--line);padding:8px 20px 16px;flex-direction:column;align-items:stretch;gap:0}
+    .light-theme .nav-links{background:#fffaf6}
+    .nav-links.open{display:flex}
+    .nav-links li{border-bottom:1px solid var(--line)}
+    .nav-links a{display:block;padding:12px 4px;font-size:.9rem}
+    .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media(max-width:620px){
+    .wrap,.navbar{width:calc(100% - 32px)}
+    .grid,.grid.two{grid-template-columns:1fr}
+    .hero{min-height:72svh;padding:72px 16px}
+    .hero p{font-size:.95rem}
+    .card{padding:22px}
+    .age{font-size:.88rem}
+    .btn{width:100%}
+    .navbar{gap:8px}
+    .nav-tools{gap:6px}
+    .language-switch button{min-width:32px;padding:6px 7px}
+    .logo{font-size:1rem}
+    .burger{width:42px;height:42px}
+    .chat-widget{right:12px;bottom:12px}
+    .chat-panel{bottom:62px;width:calc(100vw - 24px);height:min(540px,calc(100svh - 95px))}
+    .chat-launch{min-height:48px;padding:0 16px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+    .motion-enabled .reveal-item{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body class="light-theme">
+
+<header class="header">
+  <nav class="navbar" aria-label="Основная навигация">
+    <a class="logo" href="#top">DRUGIE <span>TANCY</span></a>
+    <div class="nav-tools">
+      <div class="language-switch" role="group" aria-label="Язык сайта">
+        <button type="button" data-language="ru" aria-pressed="true">RU</button>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему">☾</button>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    </div>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="#about" data-en="About">О студии</a></li>
+      <li><a href="#coaches" data-en="Coaches">Тренеры</a></li>
+      <li><a href="#wins" data-en="Awards">Достижения</a></li>
+      <li><a href="#prices" data-en="Prices">Цены</a></li>
+      <li><a href="#age" data-en="Groups">Группы</a></li>
+      <li><a href="#visit" data-en="First visit">Первый визит</a></li>
+      <li><a href="#reviews" data-en="Reviews">Отзывы</a></li>
+      <li><a href="#student" data-en="Cabinet">Кабинет</a></li>
+      <li><a href="#contacts" data-en="Contacts">Контакты</a></li>
+      <li><a href="#form" data-en="Apply">Заявка</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow" data-en="Makeyevka · Nizhnyaya Krynka">Макеевка · Нижняя Крынка</div>
+      <h1>DRUGIE TANCY <span data-en="DANCE FREE">ТАНЦУЙ СВОБОДНО</span></h1>
+      <p data-en="Modern choreography, acrobatics and team spirit. Find your style and reach the next level with us.">Современная хореография, акробатика и командный дух. Найди свой стиль и выходи на новый уровень вместе с нами.</p>
+      <a class="btn" href="#form" data-en="Book a trial class">Записаться на пробное</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="content wrap" id="about">
+    <h2 data-en="About the crew">О коллективе</h2>
+    <div class="copy">
+      <p><span style="color:var(--lime);font-weight:800">DRUGIE TANCY</span> <span data-en="— a dance studio where you can unlock your potential, try different styles and grow inside a supportive team.">— студия танца, где можно раскрыть свой потенциал, попробовать разные направления и заниматься в поддерживающей команде.</span></p>
+      <p class="muted" data-en="The programme includes hip-hop, contemporary, acrobatics and stage dance. Groups are formed according to age and level.">В программе — hip-hop, contemporary, акробатика и эстрадный танец. Группы формируются с учётом возраста и уровня подготовки.</p>
+    </div>
+  </section>
+
+  <!-- COACHES -->
+  <section class="content alt" id="coaches">
+    <div class="wrap">
+      <h2 data-en="Coaches">Тренеры</h2>
+      <p class="muted" style="max-width:720px;margin:-10px 0 24px" data-en="Each coach leads their own direction and works with both beginners and competition teams.">Каждый тренер ведёт своё направление и работает как с новичками, так и с соревновательными составами.</p>
+      <div class="grid">
+        <article class="card reveal-item">
+          <div class="tag">Hip-hop</div>
+          <h3 data-en="Hip-hop coach">Тренер по hip-hop</h3>
+          <p data-en="Groove, foundations, freestyle and staging of competition numbers.">Грув, база, фристайл и постановка конкурсных номеров.</p>
+        </article>
+        <article class="card reveal-item">
+          <div class="tag">Contemporary</div>
+          <h3 data-en="Contemporary coach">Тренер по contemporary</h3>
+          <p data-en="Technique, floor work, stretching and stage imagery.">Техника, партер, растяжка и сценический образ.</p>
+        </article>
+        <article class="card reveal-item">
+          <div class="tag">Acrobatics</div>
+          <h3 data-en="Acrobatics coach">Тренер по акробатике</h3>
+          <p data-en="Safe warm-up, elements from simple to complex, physical conditioning.">Безопасный разогрев, элементы от простых к сложным, физподготовка.</p>
+        </article>
+      </div>
+      <p class="info-note" style="margin-top:24px" data-en="Photos and names of the coaches will appear here after approval — the layout is ready for them.">Фотографии и имена тренеров появятся здесь после согласования — блок уже готов к заполнению.</p>
+    </div>
+  </section>
+
+  <!-- WINS -->
+  <section class="content wrap" id="wins">
+    <h2 data-en="Achievements">Достижения</h2>
+    <div class="grid">
+      <article class="card reveal-item">
+        <div class="tag warm" data-en="Festivals">Фестивали</div>
+        <h3 data-en="City and regional stages">Городские и региональные площадки</h3>
+        <p data-en="The crew takes part in festivals and gala concerts, gaining stage experience.">Коллектив участвует в фестивалях и гала-концертах, получая сценический опыт.</p>
+      </article>
+      <article class="card reveal-item">
+        <div class="tag warm" data-en="Competitions">Конкурсы</div>
+        <h3 data-en="Competitive line-ups">Соревновательные составы</h3>
+        <p data-en="Separate teams are prepared for competitions in different age categories.">Для конкурсов готовятся отдельные составы в разных возрастных категориях.</p>
+      </article>
+      <article class="card reveal-item">
+        <div class="tag warm" data-en="Progress">Прогресс</div>
+        <h3 data-en="Open class reports">Открытые отчёты</h3>
+        <p data-en="Twice a year parents see the results at open classes and showcases.">Два раза в год родители видят результат на открытых занятиях и показах.</p>
+      </article>
+    </div>
+    <p class="info-note" style="margin-top:24px" data-en="The exact list of diplomas and awards is filled in by the studio — the section structure is ready.">Точный список дипломов и наград заполняется студией — структура раздела уже готова.</p>
+  </section>
+
+  <!-- PRICES -->
+  <section class="content alt" id="prices">
+    <div class="wrap">
+      <h2 data-en="Prices">Цены</h2>
+      <div class="grid">
+        <article class="card price-card reveal-item">
+          <div class="tag" data-en="Trial">Пробное</div>
+          <div class="price">300 ₽</div>
+          <ul>
+            <li data-en="One class">Одно занятие</li>
+            <li data-en="Any direction">Любое направление</li>
+            <li data-en="No membership needed">Без абонемента</li>
+          </ul>
+          <a class="btn outline" href="#form" data-en="Book">Записаться</a>
+        </article>
+        <article class="card price-card featured reveal-item">
+          <div class="tag" data-en="Popular">Популярный</div>
+          <div class="price">3 500 ₽</div>
+          <ul>
+            <li data-en="8 classes per month">8 занятий в месяц</li>
+            <li data-en="2 times a week">2 раза в неделю</li>
+            <li data-en="Choice of direction">Выбор направления</li>
+          </ul>
+          <a class="btn" href="#form" data-en="Book">Записаться</a>
+        </article>
+        <article class="card price-card reveal-item">
+          <div class="tag" data-en="Unlimited">Безлимит</div>
+          <div class="price">4 500 ₽</div>
+          <ul>
+            <li data-en="Unlimited classes">Неограниченные занятия</li>
+            <li data-en="All directions">Все направления</li>
+            <li data-en="Competition team option">Участие в составах</li>
+          </ul>
+          <a class="btn outline" href="#form" data-en="Book">Записаться</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGE GROUPS -->
+  <section class="content wrap" id="age">
+    <h2 data-en="Groups by age">Группы по возрасту</h2>
+    <div class="ages">
+      <div class="age"><strong>4–6</strong> <span data-en="years">лет</span></div>
+      <div class="age"><strong>7–10</strong> <span data-en="years">лет</span></div>
+      <div class="age"><strong>11–14</strong> <span data-en="years">лет</span></div>
+      <div class="age"><strong>15–18</strong> <span data-en="years">лет</span></div>
+      <div class="age"><strong>18+</strong> <span data-en="adults">взрослые</span></div>
+    </div>
+    <p class="muted" style="margin-top:24px;max-width:760px" data-en="The final group depends on age and level. If you are not sure which group fits, book a trial class — the coach will advise you.">Итоговая группа зависит от возраста и уровня. Если не уверены, какая подходит, запишитесь на пробное — тренер подскажет.</p>
+  </section>
+
+  <!-- FIRST VISIT -->
+  <section class="content alt" id="visit">
+    <div class="wrap">
+      <h2 data-en="First visit">Первый визит</h2>
+      <div class="grid two">
+        <div>
+          <ul class="list">
+            <li data-en="Book a trial class via the form or by phone.">Запишитесь на пробное занятие через форму или по телефону.</li>
+            <li data-en="Come 10–15 minutes before the class.">Приходите за 10–15 минут до занятия.</li>
+            <li data-en="Take comfortable sportswear, a change of shoes and water.">Возьмите удобную спортивную форму, сменную обувь и воду.</li>
+            <li data-en="Talk to the coach: they will place you in a suitable group.">Поговорите с тренером: он подберёт подходящую группу.</li>
+          </ul>
+          <p class="info-note" style="margin-top:20px" data-en="For children under 18, a parent's consent is required.">Для детей до 18 лет нужно согласие родителя.</p>
+        </div>
+        <div class="card">
+          <div class="tag" data-en="Hours">Часы работы</div>
+          <div class="hour"><span data-en="Mon – Fri">Пн – Пт</span><strong>15:00 – 21:00</strong></div>
+          <div class="hour"><span data-en="Saturday">Суббота</span><strong>10:00 – 18:00</strong></div>
+          <div class="hour"><span data-en="Sunday">Воскресенье</span><strong data-en="Closed">Выходной</strong></div>
+          <p class="muted" style="margin-top:16px" data-en="The schedule is confirmed with the coach after booking.">Расписание уточняется у тренера после записи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="content wrap" id="reviews">
+    <h2 data-en="Reviews">Отзывы</h2>
+    <p class="reviews-note" data-en="Reviews are published after moderation: only real feedback from students and parents.">Отзывы публикуются после модерации: только реальные отклики учеников и родителей.</p>
+    <div class="grid">
+      <div class="quote-empty reveal-item">
+        <div>
+          <strong data-en="Place for a review">Место для отзыва</strong>
+          <span data-en="Leave a review via the form — we will publish it here.">Оставьте отзыв через форму — мы опубликуем его здесь.</span>
+        </div>
+      </div>
+      <div class="quote-empty reveal-item">
+        <div>
+          <strong data-en="Place for a review">Место для отзыва</strong>
+          <span data-en="Feedback from parents of young students.">Отклики родителей юных учеников.</span>
+        </div>
+      </div>
+      <div class="quote-empty reveal-item">
+        <div>
+          <strong data-en="Place for a review">Место для отзыва</strong>
+          <span data-en="Feedback from adult groups.">Впечатления взрослых групп.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENT CABINET -->
+  <section class="content alt" id="student">
+    <div class="wrap">
+      <h2 data-en="Student cabinet">Кабинет ученика</h2>
+      <div class="grid two">
+        <div class="card profile-card">
+          <div class="tag" data-en="Log in">Вход</div>
+          <form class="form" id="login-form" style="border:0;padding:0;background:transparent" novalidate>
+            <div class="field">
+              <label for="login-phone" data-en="Phone number">Номер телефона</label>
+              <input id="login-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" data-en-ph="+7 (___) ___-__-__" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="login-code" data-en="Code from SMS">Код из SMS</label>
+              <input id="login-code" name="code" type="text" inputmode="numeric" placeholder="4 цифры" data-en-ph="4 digits" autocomplete="one-time-code">
+            </div>
+            <div class="error" id="login-error" role="alert"></div>
+            <button class="btn" type="submit" data-en="Log in">Войти</button>
+          </form>
+          <div class="profile-note" data-en="Demo mode: the cabinet is not connected to a database yet. Booking and schedule are confirmed by the coach.">Демо-режим: кабинет пока не подключён к базе данных. Запись и расписание подтверждает тренер.</div>
+        </div>
+        <div class="card profile-card" id="profile-card" hidden>
+          <div class="tag" data-en="Profile">Профиль</div>
+          <h3 id="profile-name">—</h3>
+          <div class="hour"><span data-en="Direction">Направление</span><strong>Hip-hop</strong></div>
+          <div class="hour"><span data-en="Group">Группа</span><strong>11–14</strong></div>
+          <div class="hour"><span data-en="Next class">Ближайшее занятие</span><strong data-en="To be confirmed">Уточняется</strong></div>
+          <p class="muted" style="margin-top:14px" data-en="Data is shown as an example. Real schedule will appear after the cabinet is launched.">Данные показаны для примера. Реальное расписание появится после запуска кабинета.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="content wrap" id="contacts">
+    <h2 data-en="Contacts">Контакты</h2>
+    <div class="grid two">
+      <div class="card contact">
+        <h3 data-en="Nizhnyaya Krynka">Нижняя Крынка</h3>
+        <p class="muted" data-en="House of Culture">Дом культуры</p>
+        <div class="hour"><span data-en="Phone">Телефон</span><strong><a href="tel:+79491234567">+7 (949) 123-45-67</a></strong></div>
+        <div class="hour"><span data-en="E-mail">E-mail</span><strong><a href="mailto:drugie.tancy@mail.ru">drugie.tancy@mail.ru</a></strong></div>
+      </div>
+      <div class="card contact">
+        <h3 data-en="Makeyevka">Макеевка</h3>
+        <p class="muted" data-en="Sports club «Fizra»">Спортивный клуб «Физра»</p>
+        <div class="hour"><span data-en="Phone">Телефон</span><strong><a href="tel:+79491234567">+7 (949) 123-45-67</a></strong></div>
+        <div class="hour"><span data-en="E-mail">E-mail</span><strong><a href="mailto:drugie.tancy@mail.ru">drugie.tancy@mail.ru</a></strong></div>
+      </div>
+    </div>
+    <div class="social-links">
+      <a class="btn outline" href="https://www.instagram.com/drugie_tancy_" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn outline" href="https://www.youtube.com/@drugie_tancy" target="_blank" rel="noopener">YouTube</a>
+      <a class="btn outline" href="https://t.me/drugie_tancy" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn outline" href="https://www.tiktok.com/@drugie_tancy" target="_blank" rel="noopener">TikTok</a>
+      <a class="btn vk" href="https://vk.ru/drugietancy" target="_blank" rel="noopener">VK</a>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="content alt" id="form">
+    <div class="wrap form-wrap">
+      <h2 data-en="Application">Заявка</h2>
+      <p class="form-intro" data-en="Leave your details — the coach will contact you and help you choose a group.">Оставьте данные — тренер свяжется с вами и поможет выбрать группу.</p>
+      <form class="form" id="booking-form" novalidate>
+        <div class="field">
+          <label for="name" data-en="Name">Имя</label>
+          <input id="name" name="name" type="text" placeholder="Как к вам обращаться" data-en-ph="How should we call you" autocomplete="name" required>
+          <div class="error" data-error-for="name" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="phone" data-en="Phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" data-en-ph="+7 (___) ___-__-__" autocomplete="tel" required>
+          <div class="error" data-error-for="phone" role="alert"></div>
+        </div>
+        <div class="field">
+          <label for="direction" data-en="Direction">Направление</label>
+          <select id="direction" name="direction">
+            <option value="hip-hop" data-en="Hip-hop">Hip-hop</option>
+            <option value="contemporary" data-en="Contemporary">Contemporary</option>
+            <option value="acrobatics" data-en="Acrobatics">Акробатика</option>
+            <option value="stage" data-en="Stage dance">Эстрадный танец</option>
+            <option value="unknown" data-en="Not sure yet">Пока не знаю</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="age" data-en="Student's age">Возраст ученика</label>
+          <input id="age" name="age" type="number" min="3" max="99" placeholder="Например, 12" data-en-ph="For example, 12">
+        </div>
+        <div class="field">
+          <label for="comment" data-en="Comment">Комментарий</label>
+          <textarea id="comment" name="comment" placeholder="Удобное время, вопросы" data-en-ph="Preferred time, questions"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span data-en="I agree to the processing of personal data.">Согласен на обработку персональных данных.</span>
+        </label>
+        <div class="error" data-error-for="consent" role="alert"></div>
+        <button class="btn" type="submit" data-en="Send application">Отправить заявку</button>
+        <div class="status" id="form-status" role="status" aria-live="polite"></div>
+        <p class="form-note" data-en="Demo form: the data is not sent to a server. Connect a handler to send it.">Демо-форма: данные никуда не отправляются. Подключите обработчик для реальной отправки.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2 data-en="Ready to start?">Готовы начать?</h2>
+    <p data-en="The first class is a chance to meet the coach, the team and yourself in dance.">Первое занятие — это возможность познакомиться с тренером, командой и собой в танце.</p>
+    <a class="btn" href="#form" data-en="Book a trial class">Записаться на пробное</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  © <span id="year">2025</span> DRUGIE TANCY · <span data-en="Makeyevka · Nizhnyaya Krynka">Макеевка · Нижняя Крынка</span>
+</footer>
+
+<!-- ЧАТ -->
+<div class="chat-widget">
+  <div class="chat-panel" id="chat-panel" hidden>
+    <div class="chat-head">
+      <div>
+        <strong>DRUGIE TANCY</strong>
+        <small data-en="Assistant · answers around the clock">Помощник · отвечает круглосуточно</small>
+      </div>
+      <button type="button" id="chat-close" aria-label="Закрыть чат">×</button>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button type="button" data-q="prices" data-en="Prices">Цены</button>
+      <button type="button" data-q="schedule" data-en="Schedule">Расписание</button>
+      <button type="button" data-q="address" data-en="Address">Адрес</button>
+      <button type="button" data-q="trial" data-en="Trial class">Пробное занятие</button>
+    </div>
+    <form class="chat-form" id="chat-form">
+      <label class="visually-hidden" for="chat-input" data-en="Message">Сообщение</label>
+      <input id="chat-input" type="text" placeholder="Ваш вопрос…" data-en-ph="Your question…" autocomplete="off">
+      <button type="submit" aria-label="Отправить">→</button>
+    </form>
+  </div>
+  <button class="chat-launch" id="chat-launch" type="button" aria-expanded="false" aria-controls="chat-panel">
+    <span>💬</span><span data-en="Ask a question">Задать вопрос</span>
+  </button>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var $ = function (sel, root) { return (root || document).querySelector(sel); };
+  var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+
+  var state = { lang: 'ru' };
+
+  /* ---------- Тема ---------- */
+  var themeBtn = $('#theme-toggle');
+
+  function themeLabel(light) {
+    if (state.lang === 'en') return light ? 'Switch to dark theme' : 'Switch to light theme';
+    return light ? 'Включить тёмную тему' : 'Включить светлую тему';
+  }
+
+  function applyTheme(light) {
+    document.body.classList.toggle('light-theme', light);
+    themeBtn.textContent = light ? '☾' : '☀';
+    themeBtn.setAttribute('aria-label', themeLabel(light));
+    themeBtn.title = themeLabel(light);
+    try { localStorage.setItem('dt-theme', light ? 'light' : 'dark'); } catch (e) {}
+  }
+
+  var savedTheme = 'light';
+  try { savedTheme = localStorage.getItem('dt-theme') || 'light'; } catch (e) {}
+  applyTheme(savedTheme === 'light');
+
+  themeBtn.addEventListener('click', function () {
+    applyTheme(!document.body.classList.contains('light-theme'));
+  });
+
+  /* ---------- Меню ---------- */
+  var burger = $('.burger');
+  var menu = $('#nav-menu');
+
+  function closeMenu() {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', state.lang === 'en' ? 'Open menu' : 'Открыть меню');
+  }
+
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', (state.lang === 'en'
+      ? (open ? 'Close menu' : 'Open menu')
+      : (open ? 'Закрыть меню' : 'Открыть меню')));
+  });
+
+  $$('#nav-menu a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
+  /* ---------- Язык ---------- */
+  var textNodes = $$('[data-en]');
+  var phNodes = $$('[data-en-ph]');
+
+  function setLang(lang) {
+    state.lang = lang;
+    document.documentElement.lang = lang;
+
+    textNodes.forEach(function (el) {
+      if (!el.dataset.ru) el.dataset.ru = el.textContent;
+      el.textContent = lang === 'ru' ? el.dataset.ru : el.dataset.en;
+    });
+
+    phNodes.forEach(function (el) {
+      if (!el.dataset.ruPh) el.dataset.ruPh = el.getAttribute('placeholder') || '';
+      el.setAttribute('placeholder', lang === 'ru' ? el.dataset.ruPh : el.dataset.enPh);
+    });
+
+    $$('.language-switch button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.language === lang));
+    });
+
+    applyTheme(document.body.classList.contains('light-theme'));
+
+    try { localStorage.setItem('dt-lang', lang); } catch (e) {}
+  }
+
+  $$('.language-switch button').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.language); });
+  });
+
+  var savedLang = 'ru';
+  try { savedLang = localStorage.getItem('dt-lang') || 'ru'; } catch (e) {}
+  if (savedLang !== 'ru') setLang(savedLang);
+
+  /* ---------- Появление блоков ---------- */
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    document.body.classList.add('motion-enabled');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    $$('.reveal-item').forEach(function (el) { observer.observe(el); });
+  }
+
+  /* ---------- Заявка ---------- */
+  var bookingForm = $('#booking-form');
+  var formStatus = $('#form-status');
+
+  function setError(name, message) {
+    var box = $('[data-error-for="' + name + '"]', bookingForm);
+    if (box) box.textContent = message || '';
+  }
+
+  bookingForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    var name = bookingForm.elements.name.value.trim();
+    var phone = bookingForm.elements.phone.value.trim();
+    var consent = bookingForm.elements.consent.checked;
+    var valid = true;
+
+    setError('name', '');
+    setError('phone', '');
+    setError('consent', '');
+    formStatus.textContent = '';
+
+    if (name.length < 2) {
+      setError('name', state.lang === 'en' ? 'Please enter your name.' : 'Укажите имя.');
+      valid = false;
+    }
+
+    var digits = phone.replace(/\D/g, '');
+    if (digits.length < 10) {
+      setError('phone', state.lang === 'en' ? 'Please enter a valid phone number.' : 'Укажите корректный телефон.');
+      valid = false;
+    }
+
+    if (!consent) {
+      setError('consent', state.lang === 'en'
+        ? 'Consent to data processing is required.'
+        : 'Нужно согласие на обработку данных.');
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    formStatus.textContent = state.lang === 'en'
+      ? 'Application sent. The coach will contact you soon.'
+      : 'Заявка отправлена. Тренер свяжется с вами в ближайшее время.';
+
+    bookingForm.classList.add('booking-arrival');
+    setTimeout(function () { bookingForm.classList.remove('booking-arrival'); }, 1300);
+    bookingForm.reset();
+  });
+
+  /* ---------- Кабинет ученика ---------- */
+  var loginForm = $('#login-form');
+  var loginError = $('#login-error');
+  var profileCard = $('#profile-card');
+
+  loginForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    loginError.textContent = '';
+
+    var phone = loginForm.elements.phone.value.replace(/\D/g, '');
+    var code = loginForm.elements.code.value.trim();
+
+    if (phone.length < 10) {
+      loginError.textContent = state.lang === 'en'
+        ? 'Please enter a valid phone number.'
+        : 'Укажите корректный телефон.';
+      return;
+    }
+    if (code.length < 4) {
+      loginError.textContent = state.lang === 'en'
+        ? 'The code must contain 4 digits.'
+        : 'Код должен содержать 4 цифры.';
+      return;
+    }
+
+    $('#profile-name').textContent = state.lang === 'en' ? 'Student' : 'Ученик';
+    profileCard.hidden = false;
+    profileCard.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
+  });
+
+  /* ---------- Чат ---------- */
+  var chatPanel = $('#chat-panel');
+  var chatLaunch = $('#chat-launch');
+  var chatClose = $('#chat-close');
+  var chatMessages = $('#chat-messages');
+  var chatForm = $('#chat-form');
+  var chatInput = $('#chat-input');
+
+  var FAQ = [
+    {
+      keys: ['цен', 'стоим', 'price', 'cost', 'сколько'],
+      ru: 'Пробное занятие — 300 ₽.\nАбонемент 8 занятий (2 раза в неделю) — 3 500 ₽/мес.\nБезлимит — 4 500 ₽/мес.',
+      en: 'Trial class — 300 ₽.\nMembership of 8 classes (twice a week) — 3 500 ₽/month.\nUnlimited — 4 500 ₽/month.'
+    },
+    {
+      keys: ['расписан', 'время', 'schedule', 'time', 'график'],
+      ru: 'Будни: 15:00–21:00, суббота: 10:00–18:00, воскресенье — выходной.\nТочное время группы уточняет тренер после записи.',
+      en: 'Weekdays: 15:00–21:00, Saturday: 10:00–18:00, Sunday is a day off.\nThe exact group time is confirmed by the coach after booking.'
+    },
+    {
+      keys: ['адрес', 'где', 'address', 'location', 'находит'],
+      ru: 'Мы занимаемся в двух местах:\n• Нижняя Крынка — Дом культуры\n• Макеевка — спортклуб «Физра»',
+      en: 'We have two locations:\n• Nizhnyaya Krynka — House of Culture\n• Makeyevka — sports club «Fizra»'
+    },
+    {
+      keys: ['пробн', 'trial', 'первое', 'first'],
+      ru: 'Пробное занятие стоит 300 ₽ и подходит для любого уровня.\nПриходите за 10–15 минут, возьмите форму, сменную обувь и воду.',
+      en: 'A trial class costs 300 ₽ and suits any level.\nCome 10–15 minutes early and bring sportswear, a change of shoes and water.'
+    },
+    {
+      keys: ['возраст', 'age', 'групп', 'дети', 'kids'],
+      ru: 'Группы: 4–6, 7–10, 11–14, 15–18 лет и взрослые 18+.\nИтоговая группа зависит от возраста и уровня подготовки.',
+      en: 'Groups: 4–6, 7–10, 11–14, 15–18 and adults 18+.\nThe final group depends on age and level.'
+    },
+    {
+      keys: ['тренер', 'coach', 'препод'],
+      ru: 'Тренеры ведут hip-hop, contemporary и акробатику.\nИмена и фото появятся на сайте после согласования.',
+      en: 'Our coaches teach hip-hop, contemporary and acrobatics.\nNames and photos will appear on the site after approval.'
+    },
+    {
+      keys: ['запис', 'book', 'заявк', 'apply'],
+      ru: 'Оставьте заявку в разделе «Заявка»: имя, телефон и направление.\nТренер свяжется с вами и поможет выбрать группу.',
+      en: 'Fill in the application form: name, phone and direction.\nThe coach will contact you and help you choose a group.'
+    }
+  ];
+
+  var GREETING = {
+    ru: 'Здравствуйте! Я помощник студии DRUGIE TANCY.\nСпросите про цены, расписание, адрес или пробное занятие.',
+    en: 'Hello! I am the DRUGIE TANCY assistant.\nAsk about prices, schedule, address or a trial class.'
+  };
+
+  var FALLBACK = {
+    ru: 'Пока не могу ответить на этот вопрос.\nОставьте заявку в разделе «Заявка» — тренер свяжется с вами.',
+    en: 'I cannot answer this question yet.\nLeave an application in the form — the coach will contact you.'
+  };
+
+  function addMessage(text, who) {
+    var div = document.createElement('div');
+    div.className = 'chat-message ' + who;
+    div.textContent = text;
+    chatMessages.appendChild(div);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    return div;
+  }
+
+  function botReply(question) {
+    var q = question.toLowerCase();
+    for (var i = 0; i < FAQ.length; i++) {
+      for (var j = 0; j < FAQ[i].keys.length; j++) {
+        if (q.indexOf(FAQ[i].keys[j]) !== -1) {
+          return FAQ[i][state.lang];
+        }
+      }
+    }
+    return FALLBACK[state.lang];
+  }
+
+  var chatStarted = false;
+
+  function openChat() {
+    chatPanel.hidden = false;
+    chatLaunch.setAttribute('aria-expanded', 'true');
+    if (!chatStarted) {
+      addMessage(GREETING[state.lang], 'bot');
+      chatStarted = true;
+    }
+    chatInput.focus();
+  }
+
+  function closeChat() {
+    chatPanel.hidden = true;
+    chatLaunch.setAttribute('aria-expanded', 'false');
+  }
+
+  chatLaunch.addEventListener('click', function () {
+    if (chatPanel.hidden) openChat(); else closeChat();
+  });
+
+  chatClose.addEventListener('click', closeChat);
+
+  chatForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var text = chatInput.value.trim();
+    if (!text) return;
+    addMessage(text, 'user');
+    chatInput.value = '';
+    setTimeout(function () { addMessage(botReply(text), 'bot'); }, 350);
+  });
+
+  $$('#chat-suggestions button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.textContent.trim();
+      addMessage(text, 'user');
+      setTimeout(function () { addMessage(botReply(btn.dataset.q + ' ' + text), 'bot'); }, 350);
+    });
+  });
+
+  /* ---------- Год в футере ---------- */
+  $('#year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
